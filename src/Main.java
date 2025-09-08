@@ -53,7 +53,18 @@ public class Main {
                     .stream()
                     .allMatch(x -> x.isDone());
 
-            if(completed) System.out.println(TAG + " " + "all task completed");
+            if(completed) {
+                System.out.println(TAG + " " + "all task completed");
+                futures
+                        .stream()
+                        .forEach(x -> {
+                            try {
+                                System.out.println(x.get());
+                            } catch (InterruptedException | ExecutionException e) {
+                                throw new RuntimeException(e);
+                            }
+                        });
+            }
              System.out.println(TAG + " " +  String.valueOf(pending.size()));
 
         }
