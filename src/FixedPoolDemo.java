@@ -1,5 +1,6 @@
 import java.lang.management.OperatingSystemMXBean;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -214,6 +215,8 @@ public class FixedPoolDemo {
 
         // Start with ExecutorCompletionService and CompletableFuture -
 
+    // done in ofc laptop
+
 
 
 
@@ -221,4 +224,4 @@ public class FixedPoolDemo {
 
 
     }
-}
+
